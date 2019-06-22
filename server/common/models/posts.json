@@ -1,0 +1,46 @@
+{
+  "name": "posts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "default": null
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "post_by": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "img": {
+      "type": "string",
+      "default": null
+    },
+    "view": {
+      "type": "number",
+      "default": 0
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_home": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

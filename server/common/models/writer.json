@@ -1,0 +1,52 @@
+{
+  "name": "writer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "nick_name": {
+      "type": "string",
+      "default": null
+    },
+    "address": {
+      "type": "string",
+      "default": null
+    },
+    "phone_number": {
+      "type": "string",
+      "default": null
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "profile_picture": {
+      "type": "string",
+      "default": null
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "writerPosts": {
+      "type": "hasMany",
+      "model": "writer_post",
+      "foreignKey": "writer_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,48 @@
+{
+  "name": "media",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "profile_picture": {
+      "type": "string",
+      "default": null
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "address": {
+      "type": "string",
+      "default": null
+    },
+    "phone_number": {
+      "type": "string",
+      "default": null
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mediaPosts": {
+      "type": "hasMany",
+      "model": "media_post",
+      "foreignKey": "media_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

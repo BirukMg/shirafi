@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "shirafi_user": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "writer": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "media": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "posts": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "news": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "sponsor": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "role": {
+    "dataSource": "mongo",
+    "public": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sponsor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "note": {
+      "type": "string",
+      "default": "no note"
+    },
+    "img": {
+      "type": "string",
+      "required": true
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

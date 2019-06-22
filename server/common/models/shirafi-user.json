@@ -1,0 +1,29 @@
+{
+  "name": "shirafi_user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "media": {
+      "type": "hasOne",
+      "model": "media",
+      "foreignKey": "user_id"
+    },
+    "writers": {
+      "type": "hasOne",
+      "model": "writer",
+      "foreignKey": "user_id"
+    },
+    "roles": {
+      "type": "hasOne",
+      "model": "role",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
